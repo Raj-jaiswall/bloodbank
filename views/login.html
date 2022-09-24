@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+      <script src="https://kit.fontawesome.com/6d199754d2.js" crossorigin="anonymous"></script>
+      <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+      <link rel="stylesheet" href="css/login.css">
+</head>
+<body>
+      <section class="mysection">
+            <div class="container">
+                  <div class="box1">
+                        <div class="mindiv2">
+                              <h3 class="haveaccount">Have an Account?</h3>
+                              <form class="signin-form" id="myform">
+                                    <div class="form-group">
+                                          <input type="text" class="myinput" name="name" id="name" placeholder="Enter Your Name" required>
+                                    </div>
+                                    <div class="form-group">
+                                          <input type="email" class="myinput" name="email" id="email" placeholder="Enter Your email" required>
+                                    </div>
+                                    <div class="form-group">
+                                          <input type="password" name="password" id="password"
+                                                placeholder="Enter Your Password" class="myinput" required>
+                                    </div>
+                                    <div class="form-group">
+                                          <input type="file" name="img" id="img" style="display: none;"
+                                                placeholder="Enter Your Password" required>
+                                          <label for="img" class="myinput">upload image</label>
+                                    </div>
+                                    <div class="gender form-group">
+                                          <input class="round" type="radio" name="gender" checked value="Male">Male
+                                          <input class="round" type="radio" name="gender" value="Female">Female
+                                          <input class="round" type="radio" name="gender" value="other">Other
+                                    </div>
+                                    <div class="form-group">
+                                          <button type="submit" value="submit" id="signupbtn" class="signbtn myinput rotateit">Sign Up</button>
+                                    </div>
+                                    <div class="form-group" id="help">
+                                          <div class="w50">
+                                                <div class="round">
+                                                      <input type="checkbox" id="checkbox" value="yes" />
+                                                      <label for="checkbox"></label>
+                                                      <p class="remeber">Remember me</p>
+                                                </div>
+                                          </div>
+                                          <div class="w50">
+                                                <a href="#" style="color: #fff">Forgot Password</a>
+                                          </div>
+                                    </div>
+                                    <p style="width: 100% !important;color: white; text-align: center !important;">— Or
+                                          Sign In With
+                                          —</p>
+                                    <div class="social">
+                                          <a href="#" class="socialbtn"><span class="ion-logo-facebook mr-2"></span>
+                                                Facebook</a>
+                                          <a href="#" class="socialbtn"><span class="ion-logo-twitter mr-2"></span>
+                                                Twitter</a>
+                                    </div>
+                              </form>
+                        </div>
+                  </div>
+            </div>
+      </section>
+      <script src="js/login.js"></script>
+</body>

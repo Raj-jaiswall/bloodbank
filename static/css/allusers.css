@@ -1,0 +1,135 @@
+* {
+      margin: 0;
+      padding: 0;
+}
+
+.mainbox {
+      overflow: hidden;
+      /* box-sizing: border-box; */
+      height: 100vh;
+      width: 100vw;
+      background-color: #ffc8c8;
+}
+
+html {
+      background-color: #ffc8c8;
+}
+
+.subbox {
+      background-color: white;
+      display: flex;
+      width: 81%;
+      height: 87%;
+      margin: auto;
+      margin-top: 3rem;
+      /* border: 1px solid black; */
+      box-shadow: 0px 0px 21px 9px #ff738c;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+      overflow: auto;
+}
+
+.subbox::-webkit-scrollbar {
+      display: none;
+}
+
+.profile {
+      width: 20%;
+
+      border: 1px solid black;
+      height: 48%;
+      max-width: 250px;
+      min-width: 200px;
+      min-height: 240px;
+      border-radius: 10px;
+      overflow: hidden;
+      margin: 1.5% 0px;
+}
+
+.profile img {
+      width: 100%;
+      height: 68%;
+      object-fit: cover;
+}
+
+.username {
+      font-size: 20px;
+      font-weight: 600;
+}
+
+.btn {
+      width: 100%;
+
+}
+
+.btn button {
+      width: 89%;
+      border: none;
+      background-color: #e1e1e1db;
+      height: 31px;
+      margin: auto;
+      display: block;
+      margin-top: 12%;
+      font-size: 16px;
+      font-family: revert;
+      border-radius: 6px;
+      outline: none;
+      color: #4e4e4e;
+}
+
+.btn button:hover {
+      background-color: #b1b1b1db;
+      cursor: pointer;
+}
+
+.card {
+      max-width: 300px;
+      margin: auto;
+      text-align: center;
+      font-family: arial;
+      position: absolute;
+      top: 110px;
+      left: 25%;
+      right: 25%;
+      display: none;
+      background-color: #ffffff;
+      box-shadow: 0px 0px 10px 1000px #000000b3;
+
+}
+
+.title {
+      color: grey;
+      font-size: 18px;
+}
+
+button {
+      border: none;
+      outline: 0;
+      display: inline-block;
+      padding: 8px;
+      color: white;
+      background-color: #000;
+      text-align: center;
+      cursor: pointer;
+      width: 100%;
+      font-size: 18px;
+}
+
+a {
+      text-decoration: none;
+      font-size: 22px;
+      color: black;
+}
+.fa-close:before,
+.fa-multiply:before,
+.fa-remove:before,
+.fa-times:before,
+.fa-xmark:before {
+      content: "\f00d";
+      position: absolute;
+      top: 0;
+      right: 7px;
+      font-size: 30px;
+      color: red;
+}

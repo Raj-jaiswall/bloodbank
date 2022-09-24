@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <script src="https://kit.fontawesome.com/6d199754d2.js" crossorigin="anonymous"></script>
+      <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+      <title>Document</title>
+      <link rel="stylesheet" href="css/donate.css">
+
+<body translate="no">
+      <div class="container">
+            <form id="myform">
+                  <div class="row">
+                        <h4>User Details </h4>
+                        <div class="input-group input-group-icon">
+                              <input required type="number" name="number" id="number" placeholder="Contact No.">
+                              <div class="input-icon"><i class="fa-solid fa-phone"></i></div>
+                        </div>
+                        <div class="input-group input-group-icon">
+                              <input required type="text" placeholder="Blood Group" id="bloodGroup">
+                              <div class="input-icon"><i class="fa-solid fa-droplet"></i></div>
+                        </div>
+                        <div class="input-group input-group-icon">
+                              <input required type="number" placeholder="Total Donation" id="totalDonation">
+                              <div class="input-icon"><i class="fa-solid fa-bottle-droplet"></i></i></div>
+                        </div>
+                  </div>
+                  <div class="row">
+                        <div class="col-half">
+                              <h4>Date of Birth</h4>
+                              <div class="input-group">
+                                    <div class="col-third">
+                                          <input id="dob" required type="date">
+                                    </div>
+                              </div>
+                        </div>
+                        <div class="col-half">
+                              <h4>Last Donation Date</h4>
+                              <div class="input-group">
+                                    <div class="col-third">
+                                          <input id="lastDonation" required type="date">
+                                    </div>
+                              </div>
+                        </div>
+                  </div>
+                  <h4>Enter Your Pass</h4>
+                  <div class="input-group input-group-icon">
+                        <input required type="password" placeholder="Password" id="password">
+                        <div class="input-icon"><i class="fa fa-key"></i></div>
+                  </div>
+                  <div class="input-group input-group-icon ">
+                        <input type="submit" class="btn" value="Submit">
+                  </div>
+
+            </form>
+      </div>
+      <script src="js/donate.js"></script>
+</body>
+
+</html>

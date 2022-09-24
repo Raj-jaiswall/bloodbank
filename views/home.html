@@ -1,0 +1,75 @@
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="css/home.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+            integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+            crossorigin="anonymous" />
+      <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+      <title>Home</title>
+</head>
+<body>
+      <div class="fulldisplay">
+             <div class="mainbox">
+                  <div class="navbar">
+                        <div class="profile" >
+                              <a class="st"  href="/update"><img src="" id="userimg" alt=""></a>  
+                              <a style="text-decoration: none;" href="/update">
+                                    <h3  id="username" style="font-family: cursive; color:#838383;margin-left: 10px;"></h3> 
+                              </a>
+                        </div>
+                        <ul>
+                              <li> <a style="text-decoration: none;" href="/">Home</a></li>
+                              <li> <a style="text-decoration: none;" href="/donate">Donate</a></li>
+                              <li> <a style="text-decoration: none;" href="/post">Show Off</a></li>
+                              <li> <a style="text-decoration: none;cursor: pointer;" href="/allusers">All Donars</a></li>
+                              <li> <a style="text-decoration: none;cursor: pointer;" onclick="logout()">LogOut</a></li>
+                        </ul>
+                  </div>
+                  <div class="middle">
+                        <div class="doctor">
+                              <img src="img/doctor.png" alt="">
+                        </div>
+                        <div class="workspace">
+                              <h1
+                                    style="margin-top: 14%; font-size: 22px;    margin-bottom: 33px; font-family: cursive;font-weight: 600;">
+                                    <span style="color: red;">Blood</span> Donation Meter</h1>
+                              <div class="meter" id="meter" >
+
+                                                <h2 class="firsttime">You Never Donate <span
+                                                            style="color: red;">Blood</span></h2>
+                                                <p>Please Donate</p>
+
+                              </div>
+                              <a href="https://www.statpearls.com/articlelibrary/viewarticle/18389/"
+                                    target="_blank"><button class="btn">Show All Users</button></a>
+                        </div>
+                  </div>
+                  <div class="bottom">
+                        <img src="img/bottom.png" alt="">
+                  </div>
+            </div>
+      </div>
+      <!-- <div>
+            your gender is: <%=data.me.gender%>
+      </div>
+      <div class="container" style="color: black;">
+            <%for(var i=0;i<data.alluser.length;i++){%>
+                  <a href="/user/<%=data.alluser[i]._id%>">
+                        <%=data.alluser[i].username%>
+                  </a>
+
+                  <button><a href="/update/<%=data.alluser[i]._id%>" onclick="msz()">Update</a></button>
+
+                  <a class="btn border-shadow delete" data-id=<%=data.alluser[i]._id%> >
+                        <span class="text-gradient"><i class="fas fa-times">delete</i></span>
+                  </a><br>
+                  <%}%>
+
+      </div> -->
+      <script src="js/home.js"></script>
+</body>
+
+</html>

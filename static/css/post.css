@@ -1,0 +1,222 @@
+#root {
+      overflow: hidden;
+      /* box-sizing: border-box; */
+      height: 100vh;
+      width: 100vw;
+      background-color: #ffc8c8;
+}
+
+html {
+      background-color: #ffc8c8;
+}
+
+* {
+      margin: 0;
+      padding: 0;
+}
+
+.mybtn p {
+      animation-name: rotate;
+      animation-duration: 1s;
+      animation-timing-function: linear;
+      animation-iteration-count: infinite;
+}
+
+@keyframes rotate {
+      0% {
+            transform: rotate(0deg);
+      }
+
+      100% {
+            transform: rotate(360deg);
+      }
+}
+
+.homeContainer {
+      background-color: white;
+      display: flex;
+      width: 81%;
+      height: 87%;
+      margin: auto;
+      margin-top: 3%;
+      /* border: 1px solid black; */
+      box-shadow: 0px 0px 21px 9px #ff738c;
+      ;
+      display: flex;
+}
+
+.article {
+      width: 35%;
+      height: 100%;
+      /* border: 1px solid red; */
+}
+
+.article img {
+      height: 100%;
+      width: 100%;
+}
+
+.post {
+      width: 100%;
+      border-radius: 10px;
+      -webkit-box-shadow: 0px 0px 16px -8px rgba(0, 0, 0, 0.68);
+      box-shadow: 0px 0px 16px -8px rgba(0, 0, 0, 0.68);
+      margin: 30px 0;
+}
+
+.postWrapper {
+      padding: 10px;
+}
+
+.postTop {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+}
+
+.postTopLeft {
+      display: flex;
+      align-items: center;
+}
+
+.postProfileImg {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      object-fit: cover;
+}
+
+.postUsername {
+      font-size: 15px;
+      font-weight: 500;
+      margin: 0 10px;
+}
+
+.postDate {
+      font-size: 12px;
+}
+
+.postCenter {
+      margin: 20px 0;
+}
+
+.postImg {
+      margin-top: 20px;
+      width: 100%;
+      max-height: 500px;
+      object-fit: contain;
+}
+
+.feed {
+      flex: 5.5;
+      width: 49%;
+      overflow: auto;
+}
+
+.feed::-webkit-scrollbar {
+      display: none;
+}
+
+.feedWrapper {
+      padding: 20px;
+}
+
+.share {
+      width: 100%;
+      border-radius: 10px;
+      -webkit-box-shadow: 0px 0px 16px -8px rgba(0, 0, 0, 0.68);
+      box-shadow: 0px 0px 16px -8px rgba(0, 0, 0, 0.68);
+}
+
+.shareWrapper {
+      padding: 10px;
+}
+
+.shareTop {
+      display: flex;
+      align-items: center;
+}
+
+.shareProfileImg {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-right: 10px;
+}
+
+.shareInput {
+      font-size: 16px;
+      border: none;
+      width: 80%;
+      outline: none;
+}
+
+.shareHr {
+      margin: 20px;
+}
+
+.shareBottom {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+}
+
+.shareOptions {
+      margin-left: 20px;
+}
+
+
+.shareButton {
+      border: none;
+      padding: 7px;
+      border-radius: 5px;
+      background-color: green;
+      font-weight: 500;
+      height: 35px;
+      width: 68px;
+      font-size: 16px;
+      margin-right: 20px;
+      cursor: pointer;
+      color: white;
+}
+
+.shareImgContainer {
+      box-sizing: border-box;
+      padding: 0 20px 10px 20px;
+      position: relative;
+      width: 95vw;
+}
+
+.shareImg {
+      box-sizing: border-box;
+      display: block;
+      /* margin: auto; */
+      margin-top: 20px;
+      max-height: 500px;
+      object-fit: contain;
+      width: 100%;
+}
+
+.shareCancelImg {
+      position: absolute;
+      top: 0;
+      right: 20px;
+      cursor: pointer;
+      opacity: 0.7;
+}
+
+.shareOptions input {
+
+      background-color: #a5a5a5;
+      border-radius: 10px;
+      border: 4px double #cccccc;
+      color: #a5a5a5;
+      text-align: center;
+      font-size: 20px;
+      padding: 8px;
+      width: 126px;
+      transition: all 0.5s;
+      cursor: pointer;
+      margin: 5px;
+}
