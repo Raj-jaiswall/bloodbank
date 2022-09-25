@@ -70,8 +70,10 @@ function timeAgo(dateParam) {
 if (localStorage.getItem("user") || sessionStorage.getItem("user")) {
       console.log("index1");
       const ele1 = document.getElementById('username')
+      const ele11 = document.getElementById('username2')
       // const ele2 = document.getElementById('password')
       const ele3 = document.getElementById('userimg');
+      const ele33 = document.getElementById('userimg2');
       var x;
       if (localStorage.getItem("user")) {
             x = JSON.parse(localStorage.getItem("user"));
@@ -80,7 +82,9 @@ if (localStorage.getItem("user") || sessionStorage.getItem("user")) {
             x = JSON.parse(sessionStorage.getItem("user"));
       }
       ele1.innerText = x.username;
+      ele11.innerText = x.username;
       ele3.setAttribute('src', x.userprofile);
+      ele33.setAttribute('src', x.userprofile);
 
 
       function showdata() {

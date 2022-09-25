@@ -4,6 +4,7 @@ const dotenv = require('dotenv');
 dotenv.config({ path: ".env" });
 
 const myuser = require("./models/User");
+// const mypost = require("./models/Post");
 
 const mongoose = require('mongoose');
 mongoose.connect(

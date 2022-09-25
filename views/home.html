@@ -7,24 +7,79 @@
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
             integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
             crossorigin="anonymous" />
+            <script src="https://kit.fontawesome.com/6d199754d2.js" crossorigin="anonymous"></script>
       <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
       <title>Home</title>
 </head>
+
 <body>
       <div class="fulldisplay">
-             <div class="mainbox">
+            <div class="mainbox">
+                  <div class="nav2">
+                        <h1>Welcome</h1>
+                  </div>
+                  <div class="kali_patti"></div>
+                  <div class="topbar-right">
+                        <div class="line-container">
+                              <div class="line line-1"></div>
+                              <div class="line line-2"></div>
+                              <div class="line line-3"></div>
+                        </div>
+                  </div>
+                  <div class="menu">
+                        <div class="menu-top">
+                              <div class="menu-search">
+                                   <p style="color: rgb(255, 0, 0);">Hello Donars</p> 
+                              </div>
+                        </div>
+                        <div class="menu-center">
+                              <div class="menu-item">
+                                    <i class="fas fa-home"></i>
+                                    <span><a style="text-decoration: none;" href="/">Home</a></span>
+                              </div>
+                              <div class="menu-item">
+                              <i class="fa-solid fa-hand-holding-medical"></i>
+                                    <span><a style="text-decoration: none;" href="/donate">Donate</a></span>
+                              </div>
+                              <div class="menu-item">
+                                    <i class="fa-solid fa-photo-film"></i>
+                                    <span><a style="text-decoration: none;" href="/post">Show Off</a></span>
+                              </div>
+                              <div class="menu-item">
+                                    <i class="fas fa-users"></i>
+                                    <span><a style="text-decoration: none;cursor: pointer;" href="/allusers">All Donars</a></span>
+                              </div>
+                              <div class="menu-item">
+                                    <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                                    <span><a style="text-decoration: none;cursor: pointer;" onclick="logout()">LogOut</a></span>
+                              </div>
+                        </div>
+                        <div class="menu-bottom">
+                              <div class="menu-bottom-user">
+                                    <a href="/update"><img id="userimg2" src=""
+                                          alt="User" loading="lazy"></a>
+                                    <span > <a class="st" href="/update" id="username2">Deepak Suthar</a> </span>
+                              </div>
+                              <i class="far fa-question-circle"></i>
+                        </div>
+                  </div>
+
+
+
                   <div class="navbar">
-                        <div class="profile" >
-                              <a class="st"  href="/update"><img src="" id="userimg" alt=""></a>  
+                        <div class="profile">
+                              <a class="st" href="/update"><img src="" id="userimg" alt=""></a>
                               <a style="text-decoration: none;" href="/update">
-                                    <h3  id="username" style="font-family: cursive; color:#838383;margin-left: 10px;"></h3> 
+                                    <h3 id="username" style="color:#838383;margin-left: 10px;">
+                                    </h3>
                               </a>
                         </div>
                         <ul>
                               <li> <a style="text-decoration: none;" href="/">Home</a></li>
                               <li> <a style="text-decoration: none;" href="/donate">Donate</a></li>
                               <li> <a style="text-decoration: none;" href="/post">Show Off</a></li>
-                              <li> <a style="text-decoration: none;cursor: pointer;" href="/allusers">All Donars</a></li>
+                              <li> <a style="text-decoration: none;cursor: pointer;" href="/allusers">All Donars</a>
+                              </li>
                               <li> <a style="text-decoration: none;cursor: pointer;" onclick="logout()">LogOut</a></li>
                         </ul>
                   </div>
@@ -33,18 +88,15 @@
                               <img src="img/doctor.png" alt="">
                         </div>
                         <div class="workspace">
-                              <h1
-                                    style="margin-top: 14%; font-size: 22px;    margin-bottom: 33px; font-family: cursive;font-weight: 600;">
-                                    <span style="color: red;">Blood</span> Donation Meter</h1>
-                              <div class="meter" id="meter" >
+                              <h1 style="margin-top: 14%; font-size: 22px;    margin-bottom: 33px; ">
+                                    <span style="color: red;">Blood</span> Donation Meter
+                              </h1>
+                              <div class="meter" id="meter">
 
-                                                <h2 class="firsttime">You Never Donate <span
-                                                            style="color: red;">Blood</span></h2>
-                                                <p>Please Donate</p>
+                                    <h2 class="firsttime">You Never Donate <span style="color: red;">Blood</span></h2>
+                                    <p>Please Donate</p>
 
                               </div>
-                              <a href="https://www.statpearls.com/articlelibrary/viewarticle/18389/"
-                                    target="_blank"><button class="btn">Show All Users</button></a>
                         </div>
                   </div>
                   <div class="bottom">
@@ -70,6 +122,17 @@
 
       </div> -->
       <script src="js/home.js"></script>
+      <script>
+                  const lineContainer = document.querySelector(".line-container");
+                  const menu = document.querySelector(".menu");
+                  const kalli = document.querySelector(".kali_patti");
+                  lineContainer.addEventListener("click", () => {
+                        lineContainer.classList.toggle("active");
+                        menu.classList.toggle("active");
+                        kalli.classList.toggle("active");
+                  });
+
+      </script>
 </body>
 
 </html>
