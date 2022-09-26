@@ -1,6 +1,10 @@
- 
-      document.getElementById('blackbox').style.left = "-100vw";
-       
+window.onload = () => {
+      setTimeout(() => {
+            document.getElementById('blackbox').style.left = "-100vw";
+      }, 200);
+}
+
+
 
 const myform = document.getElementById('myform');
 myform.addEventListener('submit', (e) => {
@@ -44,6 +48,6 @@ myform.addEventListener('submit', (e) => {
 function tologin() {
       document.getElementById('blackbox').style.left = "0";
       setTimeout(() => {
-                  location.replace('/login');
+            location.replace('/login');
       }, 2000);
 }
