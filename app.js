@@ -5,7 +5,6 @@ dotenv.config({ path: ".env" });
 
 const myuser = require("./models/User");
 // const mypost = require("./models/Post");
-
 const mongoose = require('mongoose');
 mongoose.connect(
       process.env.MONGO_URL,
@@ -46,6 +45,9 @@ app.get('/update', async (req, res) => {
 app.get('/donate', async (req, res) => {
       res.sendFile(x + "/donate.html");
 });
+app.get('/signup', async (req, res) => {
+      res.sendFile(x + "/signup.html");
+});
 app.get('/user/:id', async (req, res) => {
       const allusers = await myuser.findById(req.params.id);
       // console.log(allusers);
@@ -74,14 +76,14 @@ app.post('/saveUser', async (req, res) => {
             totalDonation: 0,
             dob: new Date(),
             phone: 7027513016,
-            bloodGroup:"A+"
+            bloodGroup: "A+"
       });
       const user = await newuser.save();
       res.send(user);
 })
 
 app.post('/updatedata/:id', async (req, res) => {
-      
+
       console.log(req.params.id);
       // console.log(req.body.password);
       // console.log(req.body.password);
@@ -91,14 +93,14 @@ app.post('/updatedata/:id', async (req, res) => {
             email: req.body.email,
             gender: req.body.gender
       })
-    
+
       res.send("updated");
 })
 
 app.post('/donatedata/:id', async (req, res) => {
       console.log(req.params.id);
       console.log("here");
-      await myuser.findByIdAndUpdate(req.params.id,{
+      await myuser.findByIdAndUpdate(req.params.id, {
             gender: req.body.gender,
             lastDonation: req.body.lastDonation,
             totalDonation: req.body.totalDonation,
@@ -108,6 +110,15 @@ app.post('/donatedata/:id', async (req, res) => {
       })
 
       res.send("Donated");
+})
+app.post('/login_data', async (req, res) => {
+      console.log("/login_data");
+      const data = await myuser.findOne({ email: req.body.email });
+       
+            res.send(data);
+       
+             
+      
 })
 
 const PORT = process.env.PORT || 3000;

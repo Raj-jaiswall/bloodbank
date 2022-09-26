@@ -1,4 +1,16 @@
-if (localStorage.getItem("user")||sessionStorage.getItem("user")) {
+
+setTimeout(() => {
+      document.getElementById('blackbox').style.left = "100vw";
+}, 200);
+
+function tosignup() {
+      document.getElementById('blackbox').style.left = "0";
+      setTimeout(() => {
+            location.replace('/signup');
+      }, 2000);
+}
+
+if (localStorage.getItem("user") || sessionStorage.getItem("user")) {
       run();
 }
 console.log("in login page");

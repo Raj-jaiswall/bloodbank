@@ -5,57 +5,62 @@
       <meta charset="UTF-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Login</title>
-      <link rel="stylesheet" href="../static/css/signup.css" type="text/css">
+      <title>Document</title>
+      <script src="https://kit.fontawesome.com/6d199754d2.js" crossorigin="anonymous"></script>
+      <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+      <link rel="stylesheet" href="css/signup.css">
 </head>
 
-<body>
-      <!-- <h1 style="color: black;"></h1>
-      <form action="/user_data" method="post"   id="myform">
-            <input type="text" name="name" id="name" class="myinput" placeholder="Enter the Name">
-            <input type="email" name="email" id="email" class="myinput" placeholder="Enter The Email">
-            <input type="color" name="color" id="color" class="myinput">
-            <input type="submit" value="submit" class="myinput">
-      </form> -->
-      <div class="mainbox">
-            <div class="subbox">
-                  <div class="imagebox">
-                        <div class="textbox" id="textbox">
-                              Welcome
-                        </div>
-                        <img src="img/login_page.png" alt="">
-                  </div>
-                  <div class="superformbox">
-                        <h2 style="padding-top: 30px;">Welcome</h2>
-                        <div class="formbox">
-                              <p style="font-size: 20px;padding-top: 30px;">Take a Step to Donate <span
-                                          style="color: red;">Blood</span>
-                              </p>
-                              <form action="/user_data" method="post" id="myform" ">
-                                    <input type=" text" name="name" id="name" class="myinput"
-                                    placeholder="Enter the Name"><br>
-                                    <input type="email" name="email" id="email" class="myinput"
-                                          placeholder="Enter The Email"><br>
-                                    <input type="password" name="password" id="password" class="myinput"
-                                          placeholder="Set The password"><br>
-                                    <div class="gender">
-                                          <input type="radio" name="gender" checked value="Male">Male
-                                          <input type="radio" name="gender" value="Female">Female
-                                          <input type="radio" name="gender" value="other">Other
+<body class="">
+      <div class="blackbox" id="blackbox"> 
+            <!--<p style="font-size: 40px; color:white" >we are preparing data</p>  -->
+
+            <!-- <p class="rotateit"><i  style="font-size: 40px; color:white" class="fa-solid fa-spinner"></i></p> -->
+
+      </div>
+      <div class="limiter">
+            <div class="container-login100">
+                  <div class="wrap-login100">
+                        <form class="login100-form validate-form" id="myform">
+                              <span class="login100-form-title p-b-26">
+                                    Welcome
+                              </span>
+                              <span class="login100-form-title p-b-48">
+                                    <i class="zmdi zmdi-font"></i>
+                              </span>
+                              <div class="wrap-input100 validate-input" data-validate="Valid email is: a@b.c">
+                                    <input class="input100" type="text" name="email" id="email">
+                                    <span class="focus-input100" data-placeholder="Email"></span>
+                              </div>
+                              <div class="wrap-input100 validate-input" data-validate="Enter password">
+                                    <span class="btn-show-pass">
+                                          <i class="zmdi zmdi-eye"></i>
+                                    </span>
+                                    <input class="input100" type="password" name="pass" id="password">
+                                    <span class="focus-input100" data-placeholder="Password"></span>
+                              </div>
+                              <div class="container-login100-form-btn">
+                                    <div class="wrap-login100-form-btn">
+                                          <div class="login100-form-bgbtn"></div>
+                                          <button class="login100-form-btn" id="signupbtn">
+                                                Login
+                                          </button>
                                     </div>
-                                     
-                                    <br>
-
-                                    <input type="submit" value="Login" class="submit">
-                                    <input type="submit" value="SignUp" class="submit">
-
-                              </form>
-                        </div>
+                              </div>
+                              <div class="text-center p-t-115" style="margin-top: 16px;">
+                                    <span class="txt1">
+                                          Don't have an account?
+                                    </span>
+                                    <a class="txt2" onclick="tologin()">
+                                          Sign Up
+                                    </a>
+                              </div>
+                        </form>
                   </div>
             </div>
       </div>
-
+      <div id="dropDownSelect1"></div>
       <script src="js/signup.js"></script>
 </body>
-
 </html>
