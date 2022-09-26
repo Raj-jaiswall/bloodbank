@@ -31,7 +31,7 @@ myform.addEventListener('submit', (e) => {
                         setTimeout(() => {
                               alert("wrong Password");
                               ele2.value = "";
-                        }, 1000);
+                        }, 1500);
                   }
             }
             else {
@@ -40,7 +40,7 @@ myform.addEventListener('submit', (e) => {
                         alert("Account not exits Please SignUp");
                         ele1.value = "";
                         ele2.value = "";
-                  }, 1000);
+                  }, 1500);
             }
       })
 })
@@ -49,5 +49,5 @@ function tologin() {
       document.getElementById('blackbox').style.left = "0";
       setTimeout(() => {
             location.replace('/login');
-      }, 2000);
+      }, 1500);
 }

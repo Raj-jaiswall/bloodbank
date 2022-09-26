@@ -272,8 +272,8 @@
        top: 0;
        left: 0;
        z-index: 10;
-       transition: all 2s;
-       transition-timing-function: cubic-bezier(0.16, 0.79, 0, 0.86);
+       transition: all 1s;
+       transition-timing-function: linear;
        text-align: center;
  }
 

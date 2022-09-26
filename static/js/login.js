@@ -7,7 +7,7 @@ function tosignup() {
       document.getElementById('blackbox').style.left = "0";
       setTimeout(() => {
             location.replace('/signup');
-      }, 2000);
+      }, 1500);
 }
 
 if (localStorage.getItem("user") || sessionStorage.getItem("user")) {
