@@ -3,10 +3,10 @@ setTimeout(() => {
       document.getElementById('blackbox').style.left = "100vw";
 }, 200);
 
-function tosignup() {
+function tologin() {
       document.getElementById('blackbox').style.left = "0";
       setTimeout(() => {
-            location.replace('/signup');
+            location.replace('/login');
       }, 1500);
 }
 
@@ -58,4 +58,27 @@ myform.addEventListener('submit', (event) => {
 
 function run() {
       location.replace('/');
+}
+
+
+const userProfile = document.getElementById('img')
+userProfile.onchange = function () {
+      var photos = userProfile.files;
+      photos = photos[0];
+      var fr = new FileReader();
+      fr.readAsDataURL(photos);
+      fr.onload = function (e) {
+            console.log(e.target.result);
+            document.getElementById('label').style.display = "none";
+            document.getElementById('cancel').style.display = "block"
+            document.getElementsByClassName('demoimg')[0].style.height = "140px";
+            document.getElementById('demoimg').setAttribute('src', e.target.result);
+      }
+}
+function cancelimg(){
+      document.getElementById('label').style.display = "block";
+      document.getElementById('cancel').style.display = "none"
+      userProfile.value = "";
+      document.getElementsByClassName('demoimg')[0].style.height = "0px";
+      document.getElementById('demoimg').setAttribute('src', '');
 }

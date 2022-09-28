@@ -13,11 +13,11 @@
  }
 
  .blackbox {
-       height: 100vh;
+       height: 100%;
        width: 100vw;
        background-color: rgb(61, 61, 61);
        overflow: hidden;
-       position: absolute;
+       position: fixed;
        top: 0;
        left: 0;
        z-index: 100;

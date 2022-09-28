@@ -31,7 +31,7 @@ app.get('/', (req, res) => {
       res.sendFile(x + "/home.html");
 })
 app.get('/login', (req, res) => {
-      res.sendFile(x + "/login.html");
+      res.sendFile(x + "/signup.html");
 })
 app.get('/post', (req, res) => {
       res.sendFile(x + "/post.html");
@@ -46,7 +46,7 @@ app.get('/donate', async (req, res) => {
       res.sendFile(x + "/donate.html");
 });
 app.get('/signup', async (req, res) => {
-      res.sendFile(x + "/signup.html");
+      res.sendFile(x + "/login.html");
 });
 app.get('/user/:id', async (req, res) => {
       const allusers = await myuser.findById(req.params.id);

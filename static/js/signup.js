@@ -48,6 +48,6 @@ myform.addEventListener('submit', (e) => {
 function tologin() {
       document.getElementById('blackbox').style.left = "0";
       setTimeout(() => {
-            location.replace('/login');
+            location.replace('/signup');
       }, 1500);
 }
