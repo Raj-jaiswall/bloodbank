@@ -83,9 +83,8 @@ if (localStorage.getItem("user") || sessionStorage.getItem("user")) {
       }
       ele1.innerText = x.username;
       ele11.innerText = x.username;
-      ele3.setAttribute('src', x.userprofile);
-      ele33.setAttribute('src', x.userprofile);
-
+      ele3.setAttribute('src', x.userprofile?x.userprofile:(x.gender=='Female'?'img/person/blank_female.png':'img/person/blank_male.png'));
+      ele33.setAttribute('src', ele3.getAttribute('src'));
 
       function showdata() {
             const meter = document.getElementById("meter");
@@ -107,7 +106,7 @@ if (localStorage.getItem("user") || sessionStorage.getItem("user")) {
 </div >
             <div class="other">
                   <div class="box">
-                        <h1 style="color: red;">${x.bloodGroup}</h1>
+                        <h1 style="color: #f35c86;">${x.bloodGroup}</h1>
                         <p>Blood Group</p>
                   </div>
                   <div class="box">

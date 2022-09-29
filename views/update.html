@@ -5,37 +5,74 @@
       <meta charset="UTF-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Update</title>
+      <title>Document</title>
+      <script src="https://kit.fontawesome.com/6d199754d2.js" crossorigin="anonymous"></script>
       <script src="https://code.jquery.com/jquery-3.3.1.min.js"
             integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-      <link rel="stylesheet" href="css/update.css" type="text/css">
+      <link rel="stylesheet" href="css/update.css">
 </head>
-<body>
-      <div class="mainbox">
-            <div class="subbox">
-                  <div class="superformbox">
-                        <h2 style="padding-top: 30px;">Keep Donating</h2>
-                        <div class="formbox">
-                              <p style="font-size: 20px;padding-top: 30px;">Update Your Data</p>
-                              <form id="myform">
-                                    <input type=" text" name="name" id="name" class="myinput"
-                                          placeholder="Enter the Name"><br>
-                                    <input type="email" name="email" id="email" class="myinput"
-                                          placeholder="Enter The Email">
-                                    <input type="password" name="password" id="password" class="myinput"
-                                          placeholder="Enter Your old password..."><br>
-                                          <div class="gender" id="gender">
-                                                <input type="radio" name="gender" value="Male">Male
-                                                <input type="radio" name="gender" value="Female">Female
-                                                <input type="radio" name="gender" value="other">Other
-                                          </div>
-                                          <br>
-                                    <input type="submit" value="Update" class="submit">
-                              </form>
-                        </div>
+
+<body class="">
+      <!-- <div class="blackbox" id="blackbox"> -->
+      <!-- <p style="font-size: 40px;font-family: 'Courier New', Courier, monospace; color:white;line-height: 1.8;">we
+                  are preparing data...</p> -->
+      <!-- <p class="rotateit"><i  style="font-size: 40px; color:white" class="fa-solid fa-spinner"></i></p> -->
+
+      <!-- </div> -->
+      <div class="limiter">
+            <div class="container-login100">
+                  <div class="wrap-login100">
+                        <form class="signin-form login100-form validate-form" id="myform">
+                              <div class="userprofile">
+                                    <img src="" alt="" id="userimg">
+                                    <input type="file" name="img" id="newuserimg" style="display: none;">
+                                    <label for="newuserimg">
+                                    <div  class="changeprofile">
+                                          <i class="fa-regular fa-image"></i><br>
+                                          <p>Change Img</p>
+                                    </div></label>
+                              </div>
+                              <div class="wrap-input100 validate-input" data-validate="Valid email is: a@b.c">
+                                    <input type="text" class="myinput input100" name="name" id="name" required>
+                                    <span class="focus-input100" data-placeholder="Name"></span>
+                              </div>
+                              <div class="wrap-input100 validate-input" data-validate="Valid email is: a@b.c">
+                                    <input type="email" class="myinput input100" name="email" id="email" required>
+                                    <span class="focus-input100" data-placeholder="Email"></span>
+                              </div>
+                              <div class="wrap-input100 validate-input" data-validate="Valid email is: a@b.c">
+                                    <input type="password" name="password" id="password" class="myinput input100"
+                                          required>
+                                    <span class="focus-input100" data-placeholder="Password"></span>
+                              </div>
+                              <!-- <div class="image">
+                                    <input type="file" style="display: none;" name="img" id="img"
+                                          style="display: none;">
+                                    <label for="img" id="label">Select Profile Photo<i
+                                                class="fa-regular fa-image"></i></label>
+                                    <div id="cancel"
+                                          style="display: none;font-size: 21px;margin-left: 10px;padding-bottom: 10px;">
+                                          <i onclick="cancelimg()" class="fa-solid fa-xmark"></i></div>
+                                    <div class="demoimg"><img src="" alt="" id="demoimg"></div>
+                              </div> -->
+                              <div class="gender form-group" id="gender">
+                                    <input class="round" type="radio" name="gender" value="Male">Male
+                                    <input class="round" type="radio" name="gender" value="Female">Female
+                                    <input class="round" type="radio" name="gender" value="other">Other
+                              </div>
+                              <div class="container-login100-form-btn">
+                                    <div class="wrap-login100-form-btn">
+                                          <div class="login100-form-bgbtn"></div>
+                                          <button class="login100-form-btn" id="signupbtn">
+                                                Update
+                                          </button>
+                                    </div>
+                              </div>
+                        </form>
                   </div>
             </div>
       </div>
+      <div id="dropDownSelect1"></div>
       <script src="js/update.js"></script>
 </body>
 

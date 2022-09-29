@@ -8,8 +8,10 @@ else {
 console.log("hello");
 const ele1 = document.getElementById('name');
 const ele2 = document.getElementById('email');
-ele1.value= x.username;
-ele2.value= x.email;
+const ele3 = document.getElementById('userimg');
+ele1.value = x.username;
+ele2.value = x.email;
+ele3.setAttribute('src', x.userprofile ? x.userprofile : (x.gender == 'Female' ? 'img/person/blank_female.png' : 'img/person/blank_male.png'));
 let genderele = document.getElementById("gender");
 if (x.gender == "Male") {
       genderele.innerHTML = `<input type="radio" name="gender" value="Male" checked >Male
@@ -42,28 +44,61 @@ myform.addEventListener('submit', (e) => {
                   x.username = ele1.value;
                   data["email"] = ele2.value;
                   x.email = ele2.value;
-                  
+
                   data["gender"] = selected;
                   x.gender = selected;
                   // console.log(data);
-                  var request = {
-                        "url": `/updatedata/${x._id}`,
-                        "method": "POST",
-                        "data": data
+                  const ele4 = document.getElementById('newuserimg');
+                  if (ele4.value) {
+                        console.log("with updatd img");
+                        const imagefiles = ele4.files;
+                        const image = imagefiles[0];
+                        var filereader = new FileReader();
+                        filereader.readAsDataURL(image);
+                        filereader.onload = function (event) {
+                              let xx = event.target.result;
+                              x.userprofile = xx;
+                              data["myimg"] = xx;
+                              var request = {
+                                    "url": `/updatedata/${x._id}`,
+                                    "method": "POST",
+                                    "data": data
+                              }
+                              $.ajax(request).done(function (response) {
+                                    console.log(response);
+                                    if (localStorage.getItem("user")) {
+                                          localStorage.removeItem("user");
+                                          localStorage.setItem("user", JSON.stringify(x));
+                                    }
+                                    else {
+                                          sessionStorage.removeItem("user");
+                                          sessionStorage.setItem("user", JSON.stringify(x));
+                                    }
+                                    location.replace("/");
+                              })
+                        }
                   }
-                  $.ajax(request).done(function (response) {
-                        console.log(response);
-                        if (localStorage.getItem("user")) {
-                              localStorage.removeItem("user");
-                              localStorage.setItem("user",JSON.stringify(x));
+                  else {
+                        console.log("without update img");
+                        var request = {
+                              "url": `/updatedata/${x._id}`,
+                              "method": "POST",
+                              "data": data
                         }
-                        else {
-                              sessionStorage.removeItem("user");
-                              sessionStorage.setItem("user",JSON.stringify(x));
-                        }
-                        location.replace("/");
-                          
-                  })
+                        $.ajax(request).done(function (response) {
+                              console.log(response);
+                              if (localStorage.getItem("user")) {
+                                    localStorage.removeItem("user");
+                                    localStorage.setItem("user", JSON.stringify(x));
+                              }
+                              else {
+                                    sessionStorage.removeItem("user");
+                                    sessionStorage.setItem("user", JSON.stringify(x));
+                              }
+                              location.replace("/");
+
+                        })
+                  }
             }
             else {
                   e.preventDefault();
@@ -75,3 +110,18 @@ myform.addEventListener('submit', (e) => {
             e.preventDefault();
       }
 })
+
+
+
+const ele4 = document.getElementById('newuserimg');
+ele4.onchange = function () {
+      console.log("with updatd img");
+      const imagefiles = ele4.files;
+      const image = imagefiles[0];
+      var filereader = new FileReader();
+      filereader.readAsDataURL(image);
+      filereader.onload = function (event) {
+            let xx = event.target.result;
+            ele3.setAttribute('src', xx);
+      }
+}

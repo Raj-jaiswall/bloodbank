@@ -66,6 +66,7 @@ app.get('/allids', async (req, res) => {
 app.post('/saveUser', async (req, res) => {
       console.log(req.body.email);
       console.log(req.body.password);
+      console.log(req.body.myimg);
       const newuser = new myuser({
             username: req.body.name,
             email: req.body.email,
@@ -78,6 +79,7 @@ app.post('/saveUser', async (req, res) => {
             phone: 7027513016,
             bloodGroup: "A+"
       });
+      console.log(newuser);
       const user = await newuser.save();
       res.send(user);
 })
@@ -91,6 +93,7 @@ app.post('/updatedata/:id', async (req, res) => {
       await myuser.findByIdAndUpdate(req.params.id, {
             username: req.body.name,
             email: req.body.email,
+            userprofile: req.body.myimg,
             gender: req.body.gender
       })
 
@@ -114,11 +117,11 @@ app.post('/donatedata/:id', async (req, res) => {
 app.post('/login_data', async (req, res) => {
       console.log("/login_data");
       const data = await myuser.findOne({ email: req.body.email });
-       
-            res.send(data);
-       
-             
-      
+
+      res.send(data);
+
+
+
 })
 
 const PORT = process.env.PORT || 3000;

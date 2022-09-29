@@ -19,8 +19,15 @@ function runarray() {
             xhr.getResponseHeader('Content-type', 'application/json');
             xhr.onload = function () {
                   var userdata = JSON.parse(this.responseText);
+                  var imgsrc;
+                  if (userdata.userprofile) {
+                        imgsrc = userdata.userprofile;
+                  }
+                  else {
+                        imgsrc = (userdata.gender == 'Female' ? 'img/person/blank_female.png' : 'img/person/blank_male.png');
+                  }
                   alluserimg.innerHTML += `<div class="profile">
-                        <img  src=${userdata.userprofile}
+                        <img  src=${imgsrc}
                                 alt="">
                         <div class="username">${userdata.username}</div>
                         <p style="display: none;">${userdata.totalDonation}</p>

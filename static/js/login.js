@@ -24,19 +24,48 @@ myform.addEventListener('submit', (event) => {
       const selected = document.querySelector('input[name="gender"]:checked').value;
       document.getElementById('signupbtn').innerHTML = `<i class="fa-solid fa-spinner"></i>`
       document.getElementById('signupbtn').classList.add('rotateit');
-      const imagefiles = document.getElementById('img').files;
-      const image = imagefiles[0];
-      var filereader = new FileReader();
-      filereader.readAsDataURL(image);
-      filereader.onload = function (event) {
-            let x = event.target.result;
+      const imgele = document.getElementById('img');
+      if (imgele.value) {
+            console.log("with img")
+            const imagefiles = document.getElementById('img').files;
+            const image = imagefiles[0];
+            var filereader = new FileReader();
+            filereader.readAsDataURL(image);
+            filereader.onload = function (event) {
+                  let x = event.target.result;
+                  var data = {}
+                  data["name"] = name1.value;
+                  data["email"] = email1.value;
+                  data["password"] = password1.value;
+                  data["myimg"] = x;
+                  data["gender"] = selected;
+                  console.log(data);
+                  var request = {
+                        "url": `/saveUser`,
+                        "method": "POST",
+                        "data": data
+                  }
+                  $.ajax(request).done(function (response) {
+                        if (document.getElementById('checkbox').checked) {
+                              console.log("local")
+                              localStorage.setItem("user", JSON.stringify(response));
+                        }
+                        else {
+                              console.log("session")
+                              sessionStorage.setItem("user", JSON.stringify(response))
+                        }
+                        run();
+                  })
+            }
+      }
+      else {
+            console.log("without img");
             var data = {}
             data["name"] = name1.value;
             data["email"] = email1.value;
             data["password"] = password1.value;
-            data["myimg"] = x;
             data["gender"] = selected;
-            // console.log(data);
+            console.log(data);
             var request = {
                   "url": `/saveUser`,
                   "method": "POST",
@@ -75,7 +104,7 @@ userProfile.onchange = function () {
             document.getElementById('demoimg').setAttribute('src', e.target.result);
       }
 }
-function cancelimg(){
+function cancelimg() {
       document.getElementById('label').style.display = "block";
       document.getElementById('cancel').style.display = "none"
       userProfile.value = "";
