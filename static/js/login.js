@@ -86,7 +86,10 @@ myform.addEventListener('submit', (event) => {
 })
 
 function run() {
-      location.replace('/');
+      document.getElementById('blackbox').style.left = "0";
+      setTimeout(() => {
+            location.replace('/');
+      }, 1500);
 }
 
 

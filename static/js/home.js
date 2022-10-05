@@ -1,3 +1,8 @@
+setTimeout(() => {
+      document.getElementById('blackbox').style.left = "-100vw";
+}, 1000);
+
+
 const MONTH_NAMES = [
       'January', 'February', 'March', 'April', 'May', 'June',
       'July', 'August', 'September', 'October', 'November', 'December'
@@ -103,7 +108,7 @@ if (localStorage.getItem("user") || sessionStorage.getItem("user")) {
             <p style = "margin-bottom: 14px; margin-top: 10px;" > Last Time You Donated: ${timeAgo(parseInt(x.lastDonation))}</p >
  
                   <a style="font-size: 15px;" href="/donate">${str}</a>
-</div >
+            </div >
             <div class="other">
                   <div class="box">
                         <h1 style="color: #f35c86;">${x.bloodGroup}</h1>
@@ -124,10 +129,16 @@ if (localStorage.getItem("user") || sessionStorage.getItem("user")) {
       }, 5000);
 }
 else {
-      location.replace('/login');
+      document.getElementById('blackbox').style.left = "0";
+      setTimeout(() => {
+            location.replace('/login');
+      }, 1500);
 }
 function logout() {
       localStorage.removeItem('user');
       sessionStorage.removeItem('user');
-      location.replace('/');
+      document.getElementById('blackbox').style.left = "0";
+      setTimeout(() => {
+            location.replace('/login');
+      }, 1500);
 }

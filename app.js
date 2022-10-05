@@ -22,7 +22,6 @@ app.use(bodyparser.urlencoded({ limit: "50mb", extended: true, parameterLimit: 5
 
 
 const path = require('path');
-const { db } = require('./models/User');
 app.use(express.static(path.join(__dirname, 'static')));
 var x = path.join(__dirname) + "/views";
 

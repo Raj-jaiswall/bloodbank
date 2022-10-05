@@ -24,7 +24,9 @@ myform.addEventListener('submit', (e) => {
             if (response) {
                   if (response.password == ele2.value) {
                         localStorage.setItem("user", JSON.stringify(response));
-                        location.replace('/');
+                        setTimeout(() => {
+                              location.replace('/');
+                        }, 1500);
                   }
                   else {
                         document.getElementById('blackbox').style.left = "-100vw";
@@ -40,7 +42,7 @@ myform.addEventListener('submit', (e) => {
                         alert("Account not exits Please SignUp");
                         ele1.value = "";
                         ele2.value = "";
-                  }, 1500);
+                  }, 1000);
             }
       })
 })
