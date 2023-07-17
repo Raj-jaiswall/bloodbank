@@ -1,2 +1,2 @@
 # bloodbank
-A simple website build using Nodejs,Ejs,MongoDB
+A simple website build using Nodejs,HTML5,MongoDB
